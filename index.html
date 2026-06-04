@@ -337,11 +337,11 @@ button:hover {
 <!-- ================= PASSWORD SCREEN ================= -->
 <div class="lock-screen" id="lockScreen">
   <div class="lock-box">
-    <div class="lock-title">🎂 Birthday Surprise</div>
-    <div class="lock-sub">Enter the password to open your birthday surprise 💌</div>
-    <div class="lock-countdown" id="lockCountdown">⏳ Loading birthday countdown...</div>
+    <div class="lock-title">🍾 10th month anniversary surprise</div>
+    <div class="lock-sub">Enter the password to open your 10th month anniversary surprise 🍾</div>
+    <div class="lock-countdown" id="lockCountdown">⏳ Loading 10th month anniversary countdown...</div>
     <input type="password" id="passwordInput" placeholder="Password...">
-    <button onclick="checkPassword()">Unlock 💖</button>
+    <button onclick="checkPassword()">Unlock 🍾</button>
     <div class="lock-error" id="lockError">Wrong password 😭</div>
   </div>
 </div>
@@ -404,18 +404,18 @@ button:hover {
 
     <!-- MINI GAME -->
     <div class="game">
-      <div class="score">🍰 cake slices collected: <span id="score">0</span></div>
+      <div class="score">🍾 champagnes collected: <span id="score">0</span></div>
       <div class="game-area" id="gameArea"></div>
     </div>
   </div>
 </div>
 
 <!-- ================= COMBO POPUP ================= -->
-<div class="combo-popup" id="comboPopup">🎂 COMBO x10!</div>
+<div class="combo-popup" id="comboPopup">🍾 COMBO x10!</div>
 
 <script>
 /* ================= PASSWORD ================= */
-const correctPassword = "grace<3;mar30";
+const correctPassword = "grace<3;onlyurs";
 
 function checkPassword(){
   const input = document.getElementById("passwordInput").value;
@@ -433,7 +433,7 @@ function checkPassword(){
 }
 
 /* ================= COUNTDOWN ================= */
-const birthdayDate = new Date("March 30, 2026 00:00:00");
+const birthdayDate = new Date("June 10th, 2026 00:00:00");
 
 function updateCountdown(){
   const now = new Date();
@@ -453,7 +453,7 @@ function updateCountdown(){
   if(now < birthdayDate){
     text = `⏳ Birthday in <strong>${days}</strong>d <strong>${hours}</strong>h <strong>${minutes}</strong>m <strong>${seconds}</strong>s 💖`;
   } else {
-    text = `⏳ It’s been <strong>${days}</strong>d <strong>${hours}</strong>h <strong>${minutes}</strong>m <strong>${seconds}</strong>s since your Birthday 💖`;
+    text = `⏳ It’s been <strong>${days}</strong>d <strong>${hours}</strong>h <strong>${minutes}</strong>m <strong>${seconds}</strong>s since our 10th month anniversary 💖`;
   }
 
   elMain.innerHTML = text;
@@ -498,7 +498,7 @@ function photoSurprise(){
 setInterval(()=>{
   const heart = document.createElement("div");
   heart.className = "heart";
-  heart.innerHTML = "🎊";
+  heart.innerHTML = "🍾";
   heart.style.left = Math.random()*100 + "vw";
   heart.style.fontSize = Math.random()*20 + 16 + "px";
   heart.style.animationDuration = Math.random()*3 + 4 + "s";
@@ -577,7 +577,7 @@ const gameArea = document.getElementById("gameArea");
 const comboPopup = document.getElementById("comboPopup");
 
 function showCombo(){
-  comboPopup.textContent = `🎂 COMBO x${score}!`;
+  comboPopup.textContent = `🍾 COMBO x${score}!`;
   comboPopup.classList.add("show");
   confettiFlowers();
   setTimeout(()=>comboPopup.classList.remove("show"), 2000);
@@ -586,7 +586,7 @@ function showCombo(){
 function spawnHeart(){
   const heart = document.createElement("div");
   heart.className = "tap-heart";
-  heart.innerHTML = "🍰";
+  heart.innerHTML = "🍾";
   heart.style.left = Math.random()*85 + "%";
   heart.style.top = Math.random()*70 + "%";
   gameArea.appendChild(heart);
